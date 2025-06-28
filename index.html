@@ -13,13 +13,13 @@
     <h2>Llenar los siguientes datos para la actualización de folder:</h2>
     <form id="formulario">
       <input type="text" id="nombre" name="nombre" placeholder="Nombre completo" required />
-      <input type="tel" id="celular_padre" name="celular_padre" placeholder="Celular del padre" />
-      <input type="tel" id="celular_madre" name="celular_madre" placeholder="Celular de la madre" />
-      <input type="tel" id="celular_tutor" name="celular_tutor" placeholder="Celular del tutor" />
-      <input type="tel" id="celular_estudiante" name="celular_estudiante" placeholder="Celular del estudiante" />
+      <input type="tel" id="celular_padre" name="celular_padre" placeholder="Celular del padre" maxlength="8" pattern="[0-9]{8}" inputmode="numeric" />
+      <input type="tel" id="celular_madre" name="celular_madre" placeholder="Celular de la madre" maxlength="8" pattern="[0-9]{8}" inputmode="numeric" />
+      <input type="tel" id="celular_tutor" name="celular_tutor" placeholder="Celular del tutor" maxlength="8" pattern="[0-9]{8}" inputmode="numeric" />
+      <input type="tel" id="celular_estudiante" name="celular_estudiante" placeholder="Celular del estudiante" maxlength="8" pattern="[0-9]{8}" inputmode="numeric" />      
       <button type="submit">Enviar</button>
     </form>
-    <p id="respuesta"></p>
+    <p id="respuesta" class="mensaje"></p>
   </div>
   <script src="script.js"></script>
 </body>

@@ -70,7 +70,6 @@ button[type="submit"] {
 button:hover {
   background-color: #673ab7;
 }
-
 /* Mensaje */
 #respuesta {
   margin-top: 1em;
@@ -79,3 +78,28 @@ button:hover {
   color: green;
   font-size: 1rem;
 }
+
+/* Estilo general del mensaje */
+.mensaje {
+  margin-top: 1em;
+  padding: 0.8em;
+  border-radius: 8px;
+  font-weight: bold;
+  text-align: center;
+  font-size: 1rem;
+}
+
+/* Mensaje de éxito */
+.mensaje.exito {
+  color: #2e7d32;
+  background-color: #e8f5e9;
+  border: 1px solid #81c784;
+}
+
+/* Mensaje de error */
+.mensaje.error {
+  color: #c62828;
+  background-color: #ffebee;
+  border: 1px solid #ef9a9a;
+}
+

@@ -1,19 +1,6 @@
 document.getElementById("formulario").addEventListener("submit", function (e) {
   e.preventDefault();
 
-  const campos = ["celular_padre", "celular_madre", "celular_tutor", "celular_estudiante"];
-  const respuesta = document.getElementById("respuesta");
-  respuesta.className = "mensaje"; // Reiniciar clases
-
-  for (const id of campos) {
-    const valor = document.getElementById(id).value.trim();
-    if (valor !== "" && !/^\d{8}$/.test(valor)) {
-      respuesta.textContent = "❌ El número en '" + id.replace("celular_", "") + "' debe tener exactamente 8 dígitos.";
-      respuesta.classList.add("error");
-      return;
-    }
-  }
-
   const datos = new FormData(this);
   const url = "https://api.sheetbest.com/sheets/08c8db84-6224-4494-aec6-f23263057989";
 
@@ -23,14 +10,18 @@ document.getElementById("formulario").addEventListener("submit", function (e) {
   })
     .then((res) => res.text())
     .then((data) => {
-      respuesta.textContent = "✅ ¡Formulario enviado correctamente!";
-      respuesta.classList.add("exito");
-      document.getElementById("formulario").reset();
+      // Mostrar modal
+      document.getElementById("modal-mensaje").textContent = "✅ ¡Formulario enviado correctamente!";
+      document.getElementById("modal").style.display = "flex";
+      this.reset();
     })
     .catch((error) => {
-      respuesta.textContent = "❌ Error al enviar: " + error;
-      respuesta.classList.add("error");
+      document.getElementById("modal-mensaje").textContent = "❌ Error al enviar: " + error;
+      document.getElementById("modal").style.display = "flex";
     });
 });
 
-
+// Botón para cerrar el modal
+document.getElementById("cerrar-modal").addEventListener("click", function () {
+  document.getElementById("modal").style.display = "none";
+});

@@ -1,0 +1,81 @@
+/* Reset básico */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(120deg, #e0f7fa, #e1bee7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 1em;
+}
+
+/* Tarjeta contenedora */
+.contenedor {
+  background-color: #ffffff;
+  padding: 2em;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  width: 100%;
+  max-width: 480px;
+}
+
+/* Títulos */
+.contenedor h2 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 0.5em;
+  font-size: 1.2rem;
+}
+
+/* Formulario */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  margin-top: 1em;
+}
+
+input[type="text"],
+input[type="tel"] {
+  padding: 0.9em;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+input:focus {
+  outline: none;
+  border-color: #7e57c2;
+}
+
+/* Botón */
+button[type="submit"] {
+  background-color: #7e57c2;
+  color: white;
+  padding: 0.9em;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #673ab7;
+}
+
+/* Mensaje */
+#respuesta {
+  margin-top: 1em;
+  text-align: center;
+  font-weight: bold;
+  color: green;
+  font-size: 1rem;
+}

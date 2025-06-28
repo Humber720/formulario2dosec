@@ -19,6 +19,12 @@
       <input type="tel" id="celular_estudiante" name="celular_estudiante" placeholder="Celular del estudiante" maxlength="8" pattern="[0-9]{8}" inputmode="numeric" />      
       <button type="submit">Enviar</button>
     </form>
+    <div id="modal" class="modal">
+      <div class="modal-contenido">
+        <p id="modal-mensaje">✅ ¡Formulario enviado correctamente!</p>
+        <button id="cerrar-modal">Cerrar</button>
+      </div>
+    </div>    
     <p id="respuesta" class="mensaje"></p>
   </div>
   <script src="script.js"></script>
